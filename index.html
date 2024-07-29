@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.cdnfonts.com/css/cubano" rel="stylesheet" />
+    <title>Service worker demo</title>
+    <style>
+      h2,
+      p {
+        font-family: Cubano;
+        color: #fff170;
+        text-align: center;
+      }
+      body {
+        background-color: #a970ff;
+      }
+      button {
+        margin: 5px;
+        background-color: rgb(0, 255, 145);
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+        cursor: pointer;
+        border: 3px solid;
+        padding: 0.25em 0.5em;
+        box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px,
+          4px 4px 0px 0px, 5px 5px 0px 0px;
+        position: relative;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      button:active {
+        box-shadow: 0px 0px 0px 0px;
+        top: 5px;
+        left: 5px;
+      }
+
+      @media (min-width: 768px) {
+        button {
+          padding: 0.25em 0.75em;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Web Worker</h2>
+    <button id="sw-register">Register SW</button>
+    <button id="sw-unregister">Unregister SW</button>
+    <button id="load-users">load users</button>
+    <hr />
+    <form>
+      <input type="number" id="number" />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="result"></p>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
